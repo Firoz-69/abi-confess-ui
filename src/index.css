@@ -156,3 +156,25 @@
     opacity: 1;
   }
 }
+@keyframes jiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer-animation {
+  animation: shimmer 2s infinite;
+}
