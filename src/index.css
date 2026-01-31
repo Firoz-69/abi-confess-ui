@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   🌑 BASE (DARK ONLY)
+========================= */
 @layer base {
-  /* Import romantic fonts */
-  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap");
 
-  /* Base styles */
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-gradient-to-br from-sakura-50 via-blush to-cream;
-    @apply font-body text-sakura-900;
-    @apply overflow-x-hidden;
+    @apply bg-dark-bg text-text-primary font-body overflow-x-hidden;
   }
 
   h1,
@@ -19,72 +22,85 @@
   h4,
   h5,
   h6 {
-    @apply font-romantic;
+    @apply font-romantic text-sakura-700;
   }
 
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
+  p {
+    @apply text-text-secondary;
   }
 }
 
+/* =========================
+   🧱 COMPONENTS
+========================= */
 @layer components {
-  /* Custom button styles */
+  /* Romantic Button */
   .btn-romantic {
     @apply px-6 py-3 rounded-full font-medium;
-    @apply bg-gradient-to-r from-sakura-500 to-sakura-600;
-    @apply text-white shadow-lg;
-    @apply hover:from-sakura-600 hover:to-sakura-700;
-    @apply transform hover:scale-105 transition-all duration-300;
-    @apply active:scale-95;
+    @apply bg-gradient-to-r from-sakura-500 to-heart;
+    @apply text-dark-bg;
+    @apply shadow-[0_0_25px_rgba(235,95,137,0.4)];
+    @apply hover:shadow-[0_0_40px_rgba(235,95,137,0.7)];
+    @apply transition-all duration-300;
+    @apply transform hover:scale-105 active:scale-95;
   }
 
-  /* Card styles */
+  /* Dark Romantic Card */
   .card-romantic {
-    @apply bg-white/80 backdrop-blur-sm;
-    @apply border-2 border-sakura-200;
-    @apply rounded-3xl shadow-xl;
-    @apply p-8;
-    @apply hover:shadow-2xl transition-shadow duration-300;
+    @apply bg-dark-card;
+    @apply border border-dark-border;
+    @apply rounded-3xl p-8;
+    @apply shadow-[0_0_30px_rgba(235,95,137,0.15)];
+    @apply hover:shadow-[0_0_45px_rgba(235,95,137,0.3)];
+    @apply transition-all duration-300;
   }
 
-  /* Heart animation */
-  .heart-float {
-    @apply animate-float;
+  /* Inputs */
+  .input-romantic {
+    @apply bg-dark-surface text-text-primary;
+    @apply border border-dark-border;
+    @apply rounded-xl px-4 py-3;
+    @apply placeholder:text-text-muted;
+    @apply focus:outline-none focus:ring-2 focus:ring-sakura-500;
+  }
+
+  /* Badge / Chip */
+  .badge-love {
+    @apply px-4 py-1 rounded-full text-sm;
+    @apply bg-sakura-500/20 text-sakura-700;
+    @apply border border-sakura-500/30;
   }
 }
 
+/* =========================
+   ✨ UTILITIES
+========================= */
 @layer utilities {
-  /* Custom animations */
-  .animate-fade-in {
-    animation: fadeIn 1s ease-in forwards;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.8s ease-out forwards;
-  }
-
-  /* Text gradient */
   .text-gradient-romantic {
     @apply bg-gradient-to-r from-sakura-500 via-heart to-sakura-600;
     @apply bg-clip-text text-transparent;
   }
+
+  .glow-love {
+    box-shadow: 0 0 35px rgba(235, 95, 137, 0.45);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
 }
 
-/* Custom keyframes */
+/* =========================
+   🎞️ ANIMATIONS
+========================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -95,43 +111,48 @@
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
 }
 
-/* Floating hearts background effect */
-
-/* Selection color */
-::selection {
-  @apply bg-sakura-300 text-white;
-}
-
-/* Scrollbar styling */
+/* =========================
+   🖤 SCROLLBAR
+========================= */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-cream;
+  background: #0f0f14;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-sakura-300 rounded-full;
+  background: linear-gradient(to bottom, #eb5f89, #ff4d6d);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-sakura-400;
+  background: #ff7aa2;
+}
+
+/* =========================
+   💖 SELECTION
+========================= */
+::selection {
+  background: #eb5f89;
+  color: #0f0f14;
+}
+
+/* Add this in the ANIMATIONS section */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }

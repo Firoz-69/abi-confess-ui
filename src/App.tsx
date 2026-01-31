@@ -1,21 +1,15 @@
-import { useState } from "react";
-import GiftBox from "./components/GiftBox";
-import Home from "./components/Home";
-import FloatingHeartsBackground from "./components/FloatingHeartsBackground";
+import AutoSlider from "./components/AutoSlider";
+import ConfessionLetter from "./components/ConfessionLetter";
+import MemoriesSection from "./components/Memoriessection";
+import HomePage from "./pages/Home";
 
 const App = () => {
-  const [isGiftOpened, setIsGiftOpened] = useState(false);
-
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* 🌸 Background always running */}
-      <FloatingHeartsBackground />
-
-      {/* 🎁 Show GiftBox FIRST */}
-      {!isGiftOpened && <GiftBox onOpen={() => setIsGiftOpened(true)} />}
-
-      {/* 🏠 Show Home ONLY AFTER gift is opened */}
-      {isGiftOpened && <Home />}
+    <div>
+      <HomePage />
+      <MemoriesSection />
+      <AutoSlider />
+      <ConfessionLetter />
     </div>
   );
 };
