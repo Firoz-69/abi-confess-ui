@@ -1,4 +1,5 @@
 import bg from "../assests/holding-hands-bg.jpeg";
+import nameLogoBg from "../assests/BG_LOGO.png";
 
 const HomePage = () => {
   return (
@@ -13,7 +14,13 @@ const HomePage = () => {
 
       {/* Navbar */}
       <nav className="relative z-10 flex items-center justify-between px-10 py-6 text-white">
-        <h1 className="text-2xl font-script">Gokul Sam</h1>
+        <h1 className="text-2xl font-script">
+          <img
+            src={nameLogoBg}
+            alt="nameLogo_bg"
+            className="h-16 w-auto object-contain sm:h-20 md:h-24 lg:h-28"
+          />
+        </h1>
 
         <ul className="hidden md:flex gap-8 text-sm tracking-wide font-light">
           <li className="hover:text-white/70 cursor-pointer transition-colors">
