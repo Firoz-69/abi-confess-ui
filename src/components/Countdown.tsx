@@ -81,7 +81,7 @@ const Countdown = () => {
                 Until Our Special Day
               </h2>
               <p className="text-text-secondary text-lg font-light max-w-2xl mx-auto leading-relaxed">
-                Every second brings us closer to celebrating our love
+                Will You be My Kanmani ?
               </p>
             </div>
 
@@ -233,8 +233,8 @@ const Countdown = () => {
                   {/* Back - Heart emoji */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180">
                     <div className="bg-gradient-to-br from-sakura-500 to-heart border-2 border-sakura-600 rounded-3xl p-8 text-center h-full flex items-center justify-center">
-                      <div className="text-7xl font-romantic font-bold text-white drop-shadow-lg">
-                        selfie
+                      <div className="text-5xl font-romantic font-bold text-white drop-shadow-lg">
+                        Mamakutty
                       </div>
                     </div>
                   </div>
