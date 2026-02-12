@@ -49,7 +49,7 @@ const HomePage = () => {
         {" "}
         <h1
           className="
-    font-hero
+    font-romantic
     font-thin
     text-white
     text-6xl sm:text-7xl md:text-8xl lg:text-9xl
