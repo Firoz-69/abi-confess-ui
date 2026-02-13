@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import AutoSlider from "./components/AutoSlider";
 import ConfessionLetter from "./components/ConfessionLetter";
 import Countdown from "./components/Countdown";
@@ -25,13 +25,13 @@ const Home = () => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<ValentineCard />} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
