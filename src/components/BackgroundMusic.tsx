@@ -1,9 +1,26 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import musicFile from "../assests/First-Sight.mp3"; // adjust path
 
 const BackgroundMusic = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+
+  // Auto-play on mount
+  useEffect(() => {
+    const playAudio = async () => {
+      if (audioRef.current) {
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+        } catch (error) {
+          console.error("Autoplay prevented by browser:", error);
+          setIsPlaying(false);
+        }
+      }
+    };
+
+    playAudio();
+  }, []);
 
   const togglePlay = () => {
     if (audioRef.current) {
