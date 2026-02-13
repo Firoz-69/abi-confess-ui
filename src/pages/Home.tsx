@@ -1,5 +1,5 @@
 import bg from "../assests/hero.jpeg";
-import nameLogoBg from "../assests/BG_LOGO.png";
+import nameLogoBg from "../assests/logv3.png";
 
 const HomePage = () => {
   return (
