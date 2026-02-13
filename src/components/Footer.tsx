@@ -42,11 +42,11 @@ const Footer = () => {
               />
             </div>
             <p className="text-text-secondary text-sm leading-relaxed font-light">
-              Oii Selfie Hah Happy Valentines Day Oru ponnu munnadi 1st time
-              nikkkiren Ipidi Hm.. Unne kandipudikirathiku 27 varisham ayirichi
-              Ithiki melale enakku wait pannelathu so takinu solliren Naa unne …
-              love panra Mm? aa.. Aahhh! Neeyum takinu sollenum ndu avesiyam
-              ille Konjem time edithiko Wait panre…
+              Oii.. Siva Hah Happy Valentine's Day yen Husband munnadi 1st time
+              confess pandren Ipidi Hm.. Unne kandipudikirathiku 25 varisham
+              ayirichi Ithiki melale enakku wait pannelathu so takinu solliren
+              Naa unne … love panra Mm? aa.. Aahhh! Neeyum takinu sollenum ndu
+              avesiyam ille Konjem time edithiko Wait panre…
             </p>
           </div>
 
@@ -129,9 +129,9 @@ const Footer = () => {
             </h3>
             <div className="bg-dark-card border border-sakura-500/20 rounded-xl p-6 space-y-3">
               <p className="text-text-secondary text-sm font-light italic leading-relaxed">
-                "Unmai kaadhal yaarendral Unnai ennai solvenae Neeyum naanum poi
-                endraal Kadhalai thedi kolvenae Koonthal meesai ondraaga oosi
-                noolil thaipenae Thengai kulle neer pola Nenjil thekki vaipenae“
+                "Vaanam parthu kidanthene Mazhayaai vanthu vizhundhaaye Vazhi
+                thunaiyee…. Vazhi thunaiyee…Vannam soozhndha idamellam Vaa vaa
+                oodi thiruvom vaa En thunaiyee… vazhi thunaiyee.. Neeye“
               </p>
               <div className="flex items-center gap-2">
                 <div className="h-[1px] w-8 bg-sakura-500"></div>
